@@ -8,21 +8,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 2.[使用技術](#使用技術)
 
--[ ]ⅰ.[React](#React)
+    ⅰ.[React](#React)
 
--[ ]ⅱ.[Express](#Express)
+    ⅱ.[Express](#Express)
 
--[ ]ⅲ.[knex](#knex)
+    ⅲ.[knex](#knex)
 
--[ ]ⅳ.[Postgres](#Postgres)
+    ⅳ.[Postgres](#Postgres)
 
--[ ]ⅴ.[Render](#Render)
+    ⅴ.[Render](#Render)
 
 3.[はじめに](#はじめに)
 
--[ ]ⅰ.[依存ライブラリのインストールと render の設定起動](#依存ライブラリのインストールとrenderの設定起動)
+    ⅰ.[依存ライブラリのインストールと render の設定起動](#依存ライブラリのインストールとrenderの設定起動)
 
--[ ]ⅱ.[使い方](#使い方)
+    ⅱ.[使い方](#使い方)
 
 ## イントロダクション
 
