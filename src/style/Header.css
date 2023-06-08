@@ -1,0 +1,36 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+.headerDiv {
+  border: 2px solid;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.headerDiv h2 {
+  position: absolute;
+  left: 2%;
+}
+.headerDiv .bgmButton {
+  width: 15%;
+  height: 35%;
+  display: flex;
+  position: absolute;
+  left: 45%;
+}
+.headerDiv .bgmButton button {
+  margin-left: auto;
+  margin-right: auto;
+}
+.headerDiv p {
+  border: 2px solid;
+  width: 30%;
+  margin-left: 2%;
+  position: absolute;
+  left: 60%;
+}/*# sourceMappingURL=Header.css.map */
