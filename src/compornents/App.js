@@ -11,6 +11,10 @@ function App() {
   const [allBgmList, setAllBgmList] = useState([]);
 
   // console.log();
+  const URL =
+    process.env.NODE_ENV === "production"
+      ? "https://bgm-web-application.onrender.com/"
+      : "http://localhost:8080";
 
   useEffect(() => {
     console.log("useEffect処理に入りました");
@@ -19,7 +23,7 @@ function App() {
     //サイドバーへの表示はuseStateの変数を利用する。
     const getAllBgm = async () => {
       console.log("func getAllBgm入りました");
-      await fetch("http://localhost:8080/api/home")
+      await fetch(`${URL}/api/home`)
         .then((getAllBgm) => getAllBgm.json())
         .then((jsonGetAllBgm) => setAllBgmList(jsonGetAllBgm));
     };
