@@ -13,7 +13,7 @@ function App() {
   // console.log();
   const URL =
     process.env.NODE_ENV === "production"
-      ? "https://bgm-web-application.onrender.com/"
+      ? "https://bgm-web-application.onrender.com"
       : "http://localhost:8080";
 
   useEffect(() => {
