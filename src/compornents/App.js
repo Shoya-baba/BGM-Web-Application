@@ -10,7 +10,7 @@ function App() {
   //webアプリ表示時はuseEffectで取得したデータをsetAllBgmListで更新してサイドバーで表示する。
   const [allBgmList, setAllBgmList] = useState([]);
 
-  console.log(Sidebar);
+  // console.log();
 
   useEffect(() => {
     console.log("useEffect処理に入りました");
