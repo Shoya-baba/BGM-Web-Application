@@ -33,4 +33,90 @@ ul {
 }
 .sidebarDiv .bgm {
   text-align: left;
+}
+.sidebarDiv .loopDiv {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  top: 40%;
+}
+.sidebarDiv .loopDiv .loopBtnDiv {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 20%;
+  justify-content: space-around;
+}
+.sidebarDiv .loopDiv .loopBtnDiv button {
+  display: block;
+  width: 20%;
+  height: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.sidebarDiv .genreDiv {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  top: 53%;
+}
+.sidebarDiv .genreDiv .genrebtndiv {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 20%;
+  justify-content: space-around;
+}
+.sidebarDiv .genreDiv .genrebtndiv button {
+  display: block;
+  width: 20%;
+  height: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.sidebarDiv .sceneDiv {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  top: 65%;
+}
+.sidebarDiv .sceneDiv .sceneBtnDiv {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 20%;
+  justify-content: space-around;
+}
+.sidebarDiv .sceneDiv .sceneBtnDiv button {
+  display: block;
+  width: 20%;
+  height: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.sidebarDiv .sortResetDiv {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  top: 88%;
+}
+.sidebarDiv .sortResetDiv .sortReset {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.sidebarDiv .sortResetDiv .sortReset button {
+  display: block;
+  height: 20%;
+  width: 20%;
+  position: absolute;
+  top: 20%;
 }/*# sourceMappingURL=Sidebar.css.map */

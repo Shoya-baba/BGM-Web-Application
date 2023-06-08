@@ -37,18 +37,102 @@ ul {
   .bgm {
     text-align: left;
   }
-}
 
-// .contents {
-// 	margin: 16px auto;
-// 	text-align: center;
-// 	border: 1px solid #000;
-// }
-// .contents__ul {
-// 	padding-left: 0;
-// 	list-style: none;
-// 	display: inline-block;
-// }
-// .contents__li {
-// 	text-align: left;
-// }
+  .loopDiv {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 40%;
+
+    .loopBtnDiv {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 20%;
+      justify-content: space-around;
+
+      button {
+        display: block;
+        width: 20%;
+        height: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+  }
+
+  .genreDiv {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 53%;
+
+    .genrebtndiv {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 20%;
+      justify-content: space-around;
+
+      button {
+        display: block;
+        width: 20%;
+        height: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+  }
+
+  .sceneDiv {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 65%;
+
+    .sceneBtnDiv {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 20%;
+      justify-content: space-around;
+
+      button {
+        display: block;
+        width: 20%;
+        height: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+  }
+
+  .sortResetDiv {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 88%;
+
+    .sortReset {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      button {
+        display: block;
+        height: 20%;
+        width: 20%;
+        position: absolute;
+        top: 20%;
+      }
+    }
+  }
+}

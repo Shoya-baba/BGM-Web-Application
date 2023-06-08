@@ -2,69 +2,116 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 目次
 
-In the project directory, you can run:
+1.[イントロダクション](#イントロダクション) 1.[使用技術](#使用技術) 1.[React](#React) 1.[Express](#Express) 1.[knex](#knex) 1.[Postgres](#Postgres) 1.[Render](#Render) 1.[はじめに](#はじめに) 1.[依存ライブラリのインストールと render の設定起動](#依存ライブラリのインストールとrenderの設定起動) 1.[使い方](#使い方)
 
-### `npm start`
+## イントロダクション
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+この README を読んで BGM Web application で音楽を聴いてみましょう。
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 使用技術
 
-### `npm test`
+### React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Render で起動することができますが、localhost でも起動が可能です。localohost で立ち上げる場合`npm start`コマンドで起動して下さい。
 
-### `npm run build`
+### Express
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+フロントエンドとデータベースを繋ぐ役割をしています。localhost で立ち上げる場合は`node sever.js`コマンドで起動して下さい。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### knex
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+JavaScript 的に SQL を書くことが可能です。
 
-### `npm run eject`
+### Postgres
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+本アプリで使用するデータベースです。データベースを使用する為のセットアップが必要です。
+`psql`コマンドを実行し、`CREATE DATABASE bgmapplication`コマンドを実施してデータベースを作成します。
+`npm run migrate`コマンドを実行し、マイグレーションファイルを作成します。
+`npm run seed`コマンドを実行し、テーブルにデータを挿入し、データベースのセットアップは終了です。
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Render
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Render を使用してデプロイメントを行います。
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## はじめに
 
-## Learn More
+### 依存ライブラリのインストールと render の設定起動
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm install`を実行し、依存ライブラリーのインストールを実施します。
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+データベースのセットアップ
+`psql`コマンドを実行し、`CREATE DATABASE bgmapplication`コマンドを実施してデータベースを作成します。
+`npm run migrate`コマンドを実行し、マイグレーションファイルを作成します。
+`npm run seed`コマンドを実行し、テーブルにデータを挿入し、データベースのセットアップは終了です。
 
-### Code Splitting
+Render のセットアップ
+Render のアカウントを取得する。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[render.com](https://render.com) にアクセスし、最新の説明に従ってアカウントを設定してください。この際、有料プランにサインアップする必要はありません。
 
-### Analyzing the Bundle Size
+Github のアカウントと接続し、リポジトリへのアクセスを許可してください。
+新しい Web サービスを作成します。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[Render dashboard](https://dashboard.render.com) にアクセスします。
 
-### Making a Progressive Web App
+"New" ボタンをクリックします。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+"Web Service" を選択します。
 
-### Advanced Configuration
+Github のリポジトリに接続し、リストからこのリポジトリを選択します。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+このリポジトリが選択肢にない場合は、Github のリポジトリにアクセスする権限を Render に付与するようにアカウントを設定してください。
+"Name" は他で使っていない名前を入力します。
 
-### Deployment
+ルートディレクトリは空のままにします。（デフォルトでこのプロジェクトのルートになります。）
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+"Environment" は "Node" を選択します。
 
-### `npm run build` fails to minify
+"Region" は、あなたがいる場所に最も近いものを選択します。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+"Branch" には、master を入力します。
+
+" Build Command" は `npm install && npx knex migrate:latest --knexfile ./knexfile.js && npx knex seed:run --knexfile ./knexfile.js && npm run build` を入力します。
+
+"Start Command" は `npm run s-start && npm run start` と入力します。
+これはサーバーを起動するスクリプトです。
+"Free"プランが選択されていることを確認します。このプランの有効期限は 90 日間です。
+"Create Web Service" ボタンをクリックします。
+
+次にデータベースの設定を行います。
+
+データベースを作成します。
+ダッシュボードで "New" をクリックし、今回は "PostgreSQL" を選択します。
+一意の名前を付けます。（例：BBPostgres）
+データベースフィールドに bgnapplication と入力します。
+"User" フィールドに覚えやすいユーザー名を入力します
+"Region" フィールドには、最も近いリージョンを選択します。
+"PostgreSQL version" を 14 に設定します。
+他の設定はひとまず無視してください。
+"Free" プランが選択されていることを確認します。
+"Create Database" ボタンをクリックします。
+ダッシュボードに戻り、データベースのステータスが "Available" に変わるのを待ちます。
+これで Node サーバーとデータベースが設定されました。次はそこと接続する必要があります。 そのためには、Web サービスにデータベースへの接続方法を伝えるため、環境変数を設定する必要があります。
+
+Render Web サービスに DATABASE_URL と NODE_ENV という環境変数を追加します。
+
+ダッシュボードから、作成した PostgreSQL データベースをクリックします。
+" Info" タブの "Connections" セクションから、"Internal Database URL" をコピーします。
+Render のダッシュボードに戻り、作成した Node の Web サービスをクリックします。
+"Environment" タブをクリックします。
+"Add Environment Variable"をクリックします。
+"Key"に "DATABASE_URL "を入力します。
+"Value" に先ほどコピーした "Internal Database URL"を貼り付けます。
+"NODE_ENV"には"production"を入力します。
+"Save Changes" をクリックします。
+これで Render のセットアップは終了です。
+
+### 使い方
+
+Render の"Web Service"のヘッダーの URL を開いて見ましょう。
+サイドバーには曲のリストがあります。そこから聴きたい曲を選んで流して見ましょう。
+ジャンルやシーンの絞り込み機能があり、絞り込みを解除する場合は reset ボタンを押して下さい。
+
+それでは素敵な時間を。

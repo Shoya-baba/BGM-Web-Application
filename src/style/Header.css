@@ -27,10 +27,17 @@
   margin-left: auto;
   margin-right: auto;
 }
-.headerDiv p {
-  border: 2px solid;
+.headerDiv .flowTextDiv {
   width: 30%;
-  margin-left: 2%;
+  overflow: hidden;
   position: absolute;
   left: 60%;
+}
+.headerDiv .flowTextDiv p {
+  animation: flowing 6s linear infinite;
+}
+@keyframes flowing {
+  100% {
+    transform: translateX(-100%);
+  }
 }/*# sourceMappingURL=Header.css.map */

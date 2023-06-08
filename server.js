@@ -27,13 +27,22 @@ app.use("/", express.static("public"));
 
 //<<MVP>>webアプリ表示時BGM全件のリストを表示する。
 app.get("/api/home", async (req, res) => {
-  //   console.log("server.js getAllBgm入りました");
+  //DBからaudioデータを取得
   const getAllBgm = () => {
     return knex.select("*").from("audio");
   };
   const allBgmList = await getAllBgm();
-  // res.status(200).json();
-  res.status(200).json(allBgmList);
+
+  //DBからimageデータを取得
+  const getAllImage = () => {
+    return knex.select("*").from("image");
+  };
+  const allImageList = await getAllImage();
+  console.log(allBgmList);
+  console.log("**************************:");
+  console.log(allImageList);
+  res.status(200).json([allBgmList, allImageList]);
+  // res.status(200).json("hello");
 });
 
 //<<MVP>>サイドバーに表示している曲のリストを選択するとfetchでこのエンドポイントに飛んで
