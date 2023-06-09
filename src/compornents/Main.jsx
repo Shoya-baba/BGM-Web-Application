@@ -53,7 +53,9 @@ const main = (props) => {
         <video
           autoPlay
           loop
-          src={`https://drive.google.com/uc?id=${matchTagArray[0]}&export=download`}
+          src={`https://drive.google.com/uc?id=${
+            matchTagArray[Math.floor(Math.random() * matchTagArray.length)]
+          }&export=download`}
           // src="https://drive.google.com/uc?id=1_pfu92xX4rjzJK81MXF0JITsyyfMLqR5&export=download"
         ></video>
       </div>
