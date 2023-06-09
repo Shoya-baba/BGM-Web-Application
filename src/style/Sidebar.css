@@ -68,6 +68,7 @@ ul {
   margin-right: 5%;
   background-color: rgb(31, 25, 24);
   color: rgb(255, 255, 255);
+  border-radius: 30px;
 }
 .sidebarDiv .genreDiv {
   width: 100%;
@@ -92,6 +93,7 @@ ul {
   margin-right: 5%;
   background-color: rgb(31, 25, 24);
   color: rgb(255, 255, 255);
+  border-radius: 30px;
 }
 .sidebarDiv .sceneDiv {
   width: 100%;
@@ -116,6 +118,7 @@ ul {
   margin-right: 5%;
   background-color: rgb(31, 25, 24);
   color: rgb(255, 255, 255);
+  border-radius: 30px;
 }
 .sidebarDiv .sortResetDiv {
   width: 100%;
@@ -138,4 +141,5 @@ ul {
   top: 20%;
   background-color: rgb(31, 25, 24);
   color: rgb(255, 255, 255);
+  border-radius: 30px;
 }/*# sourceMappingURL=Sidebar.css.map */

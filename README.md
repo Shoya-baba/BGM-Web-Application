@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Let's heal together !! & Let's sleep now!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web app was made for lounging
 
 ## 目次
 
