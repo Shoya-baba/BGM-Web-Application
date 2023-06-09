@@ -11,11 +11,18 @@
   display: flex;
   align-items: center;
   position: relative;
+  background-color: rgb(31, 25, 24);
 
   h2 {
     position: absolute;
     left: 2%;
-    // top: 5%;
+    font-family: "Architects Daughter", cursive;
+    font-family: "Caveat", cursive;
+    font-family: "Dancing Script", cursive;
+    font-family: "Mukta", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(153, 124, 122);
   }
 
   .bgmButton {
@@ -42,6 +49,8 @@
       // border: 2px solid;
       // width: 100%;
       // margin-left: 2%;
+      color: rgb(153, 124, 122);
+
       animation: flowing 6s linear infinite;
     }
     @keyframes flowing {

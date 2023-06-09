@@ -7,6 +7,15 @@
 
 ul {
   list-style-type: none;
+  color: rgb(255, 255, 255);
+}
+
+.bgm {
+  transition: 0.5s;
+}
+
+.bgm:hover {
+  background: rgb(221, 211, 210);
 }
 
 .sidebarDiv {
@@ -15,12 +24,14 @@ ul {
   position: relative;
   top: 0;
   left: 0;
+  background-color: rgb(153, 124, 122);
 }
 .sidebarDiv p {
   width: 100%;
   text-align: center;
   position: absolute;
   top: 1%;
+  color: rgb(255, 255, 255);
 }
 .sidebarDiv .bgmUl {
   width: 100%;
@@ -55,6 +66,8 @@ ul {
   height: 20%;
   margin-left: 5%;
   margin-right: 5%;
+  background-color: rgb(31, 25, 24);
+  color: rgb(255, 255, 255);
 }
 .sidebarDiv .genreDiv {
   width: 100%;
@@ -77,6 +90,8 @@ ul {
   height: 20%;
   margin-left: 5%;
   margin-right: 5%;
+  background-color: rgb(31, 25, 24);
+  color: rgb(255, 255, 255);
 }
 .sidebarDiv .sceneDiv {
   width: 100%;
@@ -99,6 +114,8 @@ ul {
   height: 20%;
   margin-left: 5%;
   margin-right: 5%;
+  background-color: rgb(31, 25, 24);
+  color: rgb(255, 255, 255);
 }
 .sidebarDiv .sortResetDiv {
   width: 100%;
@@ -119,4 +136,6 @@ ul {
   width: 20%;
   position: absolute;
   top: 20%;
+  background-color: rgb(31, 25, 24);
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=Sidebar.css.map */

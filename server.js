@@ -38,33 +38,9 @@ app.get("/api/home", async (req, res) => {
     return knex.select("*").from("image");
   };
   const allImageList = await getAllImage();
-  console.log(allBgmList);
-  console.log("**************************:");
-  console.log(allImageList);
   res.status(200).json([allBgmList, allImageList]);
   // res.status(200).json("hello");
 });
-
-//<<MVP>>サイドバーに表示している曲のリストを選択するとfetchでこのエンドポイントに飛んで
-//google driveから音楽ファイルを取得してフロントエンドに渡す。
-/*
-app.get("/api/bgms/:id", async (req, res) => {
-  //   console.log(req.params.id);
-  const getBgmData = () => {
-    return knex.select("*").from("audio").where({ id: req.params.id });
-  };
-  const bgmData = await getBgmData();
-  //   const bgmDataUrl = getBgmData();
-  //   console.log(bgmDataUrl);
-  const bgmFile = await fetch(
-    `https://drive.google.com/uc?id=${bgmData[0].path}`
-    // `https://drive.google.com/uc?export=view&id=${bgmData[0].path}`
-  );
-  console.log(`https://drive.google.com/uc?id=${bgmData[0].path}`);
-  //   console.log(`https://drive.google.com/uc?export=view&id=${bgmData[0].path}`);
-  res.status(200).json(bgmFile);
-});
-*/
 
 app.listen(port, () => {
   console.log(`Server is online on port: ${port}`);
