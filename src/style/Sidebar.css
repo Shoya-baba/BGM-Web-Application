@@ -62,10 +62,8 @@ ul {
 }
 .sidebarDiv .loopDiv .loopBtnDiv button {
   display: block;
-  width: 20%;
+  width: 25%;
   height: 20%;
-  margin-left: 5%;
-  margin-right: 5%;
   background-color: rgb(31, 25, 24);
   color: rgb(255, 255, 255);
   border-radius: 30px;
@@ -87,10 +85,8 @@ ul {
 }
 .sidebarDiv .genreDiv .genrebtndiv button {
   display: block;
-  width: 20%;
+  width: 25%;
   height: 20%;
-  margin-left: 5%;
-  margin-right: 5%;
   background-color: rgb(31, 25, 24);
   color: rgb(255, 255, 255);
   border-radius: 30px;
@@ -112,10 +108,8 @@ ul {
 }
 .sidebarDiv .sceneDiv .sceneBtnDiv button {
   display: block;
-  width: 20%;
+  width: 30%;
   height: 20%;
-  margin-left: 5%;
-  margin-right: 5%;
   background-color: rgb(31, 25, 24);
   color: rgb(255, 255, 255);
   border-radius: 30px;
@@ -136,7 +130,7 @@ ul {
 .sidebarDiv .sortResetDiv .sortReset button {
   display: block;
   height: 20%;
-  width: 20%;
+  width: 30%;
   position: absolute;
   top: 20%;
   background-color: rgb(31, 25, 24);
