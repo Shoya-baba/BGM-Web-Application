@@ -5,54 +5,66 @@ import "../style/Main.css";
 const main = (props) => {
   // console.log(props.selectedBgm.path);
   let selectedBgmPath = props.selectedBgm.path;
-  // const selectedBgmObj = props.selectedBgm;
+  const selectedBgmObj = props.selectedBgm;
   let getImageList = props.allImageList;
   console.log(getImageList);
   let matchTagArray = [];
-  // const searchMatchTag = () => {
-  //   getImageList.forEach((element) => {
-  //     console.log(element);
-  //     if (
-  //       element.tag1 === selectedBgmObj.tag1 ||
-  //       element.tag2 === selectedBgmObj.tag1 ||
-  //       element.tag3 === selectedBgmObj.tag1
-  //     ) {
-  //       matchTagArray.push(element);
-  //     }
-  //   });
-  // getImageList.forEach((element) => {
-  //   if (
-  //     element.tag1 === selectedBgmObj.tag2 ||
-  //     element.tag2 === selectedBgmObj.tag2 ||
-  //     element.tag3 === selectedBgmObj.tag2
-  //   ) {
-  //     matchTagArray.push(element);
-  //   }
-  // });
-  // getImageList.forEach((element) => {
-  //   if (
-  //     element.tag1 === selectedBgmObj.tag3 ||
-  //     element.tag2 === selectedBgmObj.tag3 ||
-  //     element.tag3 === selectedBgmObj.tag3
-  //   ) {
-  //     matchTagArray.push(element);
-  //   }
-  // });
-  // props.setSelectedImage(matchTagArray);
-  // };
-  // searchMatchTag();
-  // console.log(matchTagArray);
+  const searchMatchTag = () => {
+    getImageList.forEach((element) => {
+      // console.log(element);
+      if (
+        element.tag1 === selectedBgmObj.tag1 ||
+        element.tag2 === selectedBgmObj.tag1 ||
+        element.tag3 === selectedBgmObj.tag1
+      ) {
+        matchTagArray.push(element.path);
+        // console.log(matchTagArray);
+      }
+      if (
+        element.tag1 === selectedBgmObj.tag2 ||
+        element.tag2 === selectedBgmObj.tag2 ||
+        element.tag3 === selectedBgmObj.tag2
+      ) {
+        matchTagArray.push(element.path);
+        // console.log(matchTagArray);
+      }
+      if (
+        element.tag1 === selectedBgmObj.tag3 ||
+        element.tag2 === selectedBgmObj.tag3 ||
+        element.tag3 === selectedBgmObj.tag3
+      ) {
+        matchTagArray.push(element.path);
+        // console.log(matchTagArray);
+      }
+      // console.log("終点です");
+    });
+
+    // props.setSelectedImage(matchTagArray);
+  };
+  searchMatchTag();
+  console.log(matchTagArray);
   // const video = document.getElementsByClassName("videoDiv");
   // video.loop = true;
 
   return (
     <div className="mainDiv">
-      {/* <div className="videoDiv">
-        {matchTagArray.map((path) => {
-          return <video src={`https://docs.google.com/uc?id=${path}`}></video>;
+      {/* 断念用 */}
+      <div className="videoDiv">
+        <video
+          autoPlay
+          loop
+          src={`https://drive.google.com/uc?id=${matchTagArray[0]}&export=download`}
+          // src="https://drive.google.com/uc?id=1_pfu92xX4rjzJK81MXF0JITsyyfMLqR5&export=download"
+        ></video>
+      </div>
+      {/* こっちが実装したい方 */}
+      {/* <video autoPlay>
+        {matchTagArray.map((moviePath) => {
+          <source
+            src={`https://drive.google.com/uc?id=${moviePath}&export=download`}
+          ></source>;
         })}
-      </div> */}
-
+      </video> */}
       <div className="audioDiv">
         <audio
           src={`https://docs.google.com/uc?id=${selectedBgmPath}`}
