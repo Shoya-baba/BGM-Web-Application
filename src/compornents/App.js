@@ -44,22 +44,9 @@ function App() {
           console.log("forReset : " + getAllBgm);
         });
     };
-    /*
-    const getAllBgm = async () => {
-      console.log("func getAllBgm入りました");
-      await fetch(`${URL}/api/home`)
-        .then((getAllBgm) => getAllBgm.json())
-        .then((jsonGetAllBgm) => {
-          setAllBgmList(jsonGetAllBgm);
-          setForReset(jsonGetAllBgm);
-        });
-    };
-    */
-    getAllData();
-    // getAllBgm();
-  }, []);
 
-  // console.log();
+    getAllData();
+  }, []);
 
   return (
     <Grid container>

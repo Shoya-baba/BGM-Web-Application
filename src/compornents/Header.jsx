@@ -6,12 +6,6 @@ const Header = (props) => {
   return (
     <div className="headerDiv">
       <h2>BGM Web Application</h2>
-      {/* 再生、停止ボタンの反転 */}
-      {/* <div className="bgmButton">
-        <button>play</button>
-        <button>pause</button>
-        <button>stop</button>
-      </div> */}
       <div className="flowTextDiv">
         <p>{props.selectedBgmName}</p>
       </div>

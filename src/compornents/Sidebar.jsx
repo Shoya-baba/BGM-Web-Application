@@ -2,12 +2,8 @@ import React from "react";
 import "../style/Sidebar.css";
 
 const Sidebar = (props) => {
-  //   console.log("↓↓↓↓↓↓ props.allBgmListの確認↓↓↓↓↓↓ ");
-  //   console.log(props.allBgmList);
   const getAllBgm = props.allBgmList;
-  // console.log(getAllBgm);
   function sortFunc(e) {
-    // console.log("sortFunc入りました");
     const sortText = e.target.id;
     const sortArray = getAllBgm.filter((bgmDataObj) => {
       if (
@@ -111,8 +107,3 @@ const Sidebar = (props) => {
 };
 
 export default Sidebar;
-
-//google driveからファイルを取得するパス例
-//expressで取得しないとcorsでerrorになる為
-//   `https://drive.google.com/uc?export=view&id=${bgmDataObj.path}`
-//   `https://drive.google.com/uc?id=${bgmDataObj.path}`

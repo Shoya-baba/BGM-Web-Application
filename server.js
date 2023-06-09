@@ -3,7 +3,6 @@ const path = require("path");
 const dotenv = require("dotenv");
 dotenv.config();
 const cors = require("cors");
-// const BGM = require("./src/秋、深まりて.mp3");
 
 const knex = require("knex")({
   client: "pg",
@@ -15,7 +14,6 @@ const knex = require("knex")({
   },
 });
 const app = express();
-// const port = process.env.PORT || 8080;
 const port = 8080;
 
 const buildPath = path.join(__dirname, "./build");
@@ -39,11 +37,8 @@ app.get("/api/home", async (req, res) => {
   };
   const allImageList = await getAllImage();
   res.status(200).json([allBgmList, allImageList]);
-  // res.status(200).json("hello");
 });
 
 app.listen(port, () => {
   console.log(`Server is online on port: ${port}`);
-  //   const testData = knex.select("*").from("audio");
-  //   console.log(testData);
 });
